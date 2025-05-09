@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-env
+  labels:
+    app: {{ print .Release.Name "-api" }}
+data:
+  # Add your environment variables here
+  NODE_ENV: "nonprd"
+  API_PORT: "8080" 
