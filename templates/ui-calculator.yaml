@@ -6,6 +6,8 @@ metadata:
   labels:
     app: {{ print $namespace "-ui" }}
   name: {{ print $namespace "-ui" }}
+  annotations:
+    reloader.stakater.com/auto: "true"
 spec:
   replicas: 1
   selector:
